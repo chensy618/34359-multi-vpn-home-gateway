@@ -54,6 +54,19 @@
     <h2>Network Condition</h2>
     <div id="networkCondition">
         <!-- Show network condition -->
+        <!-- 显示ONOS连接结果 -->
+        <%
+            String onosResponse = (String) request.getAttribute("onosResponse");
+            if (onosResponse != null) {
+        %>
+        <pre><%= onosResponse %></pre>
+        <%
+        } else {
+        %>
+        <p>No response from ONOS.</p>
+        <%
+            }
+        %>
     </div>
 
     <!-- Selected VPN Node Information -->
