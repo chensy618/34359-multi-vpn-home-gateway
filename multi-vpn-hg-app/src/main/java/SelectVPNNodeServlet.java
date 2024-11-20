@@ -71,7 +71,8 @@ public class SelectVPNNodeServlet extends HttpServlet {
                     content.append(inputLine);
                 }
                 in.close();
-                return "ONOS Response: " + content.toString();
+//                return "Onos reponse" + content.toString(); // cause errors of parsing, should not add the Onos response
+                return content.toString(); // this will return raw json format
             } else {
                 return "Failed to connect to ONOS. Response code: " + responseCode;
             }
