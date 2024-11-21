@@ -100,7 +100,7 @@
                         out.println("<p>No hosts available in ONOS response.</p>");
                     }
                 } catch (Exception e) {
-                    out.println("<p>Error parsing ONOS response: " + e.getMessage() + "</p>");
+                        out.println("<p>Error parsing ONOS response: " + e.getMessage() + "</p>");
                     e.printStackTrace();
                 }
             %>
