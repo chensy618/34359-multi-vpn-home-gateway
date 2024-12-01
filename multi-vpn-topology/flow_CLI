@@ -1,0 +1,144 @@
+SDN_DTU:flows -n                                               21:05:50
+deviceId=of:0000000000000001, flowRuleCount=2
+    id=af00003f9f0001, state=ADDED, bytes=588, packets=6, duration=6, liveType=UNKNOWN, priority=10, tableId=0, appId=org.onosproject.fwd, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:3], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=af000043a3c21c, state=ADDED, bytes=588, packets=6, duration=6, liveType=UNKNOWN, priority=10, tableId=0, appId=org.onosproject.fwd, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000002, flowRuleCount=3
+    id=af000005b81dbe, state=ADDED, bytes=588, packets=6, duration=6, liveType=UNKNOWN, priority=10, tableId=0, appId=org.onosproject.fwd, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=af0000431ab241, state=ADDED, bytes=0, packets=0, duration=6, liveType=UNKNOWN, priority=10, tableId=0, appId=org.onosproject.fwd, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=af00004ae44a6a, state=ADDED, bytes=588, packets=6, duration=6, liveType=UNKNOWN, priority=10, tableId=0, appId=org.onosproject.fwd, selector=[IN_PORT:3, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000003, flowRuleCount=2
+    id=af000055ce9345, state=ADDED, bytes=588, packets=6, duration=6, liveType=UNKNOWN, priority=10, tableId=0, appId=org.onosproject.fwd, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=af0000fa06b897, state=ADDED, bytes=0, packets=0, duration=6, liveType=UNKNOWN, priority=10, tableId=0, appId=org.onosproject.fwd, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000004, flowRuleCount=1
+    id=af000027a9dd83, state=ADDED, bytes=588, packets=6, duration=6, liveType=UNKNOWN, priority=10, tableId=0, appId=org.onosproject.fwd, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+
+
+
+SDN_DTU:flows -n                                               21:07:34
+deviceId=of:0000000000000001, flowRuleCount=1
+    id=c0000075304677, state=ADDED, bytes=0, packets=0, duration=47, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_TYPE:ipv4], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:1, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000002, flowRuleCount=1
+    id=c00000ebc37512, state=ADDED, bytes=0, packets=0, duration=3, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[VLAN_POP, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000003, flowRuleCount=1
+    id=c00000ab1e603c, state=ADDED, bytes=0, packets=0, duration=20, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_TYPE:ipv4], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:1, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000004, flowRuleCount=0
+
+
+SDN_DTU:flows -n                                               21:15:23
+deviceId=of:0000000000000001, flowRuleCount=2
+    id=c000003c9ae8fe, state=ADDED, bytes=0, packets=0, duration=40, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:1, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c0000075304677, state=ADDED, bytes=32732, packets=334, duration=402, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_TYPE:ipv4], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:1, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000002, flowRuleCount=2
+    id=c00000c8110415, state=ADDED, bytes=0, packets=0, duration=6, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[VLAN_POP, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c00000ebc37512, state=ADDED, bytes=0, packets=0, duration=358, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[VLAN_POP, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000003, flowRuleCount=2
+    id=c0000043d44a04, state=ADDED, bytes=0, packets=0, duration=23, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:1, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c00000ab1e603c, state=ADDED, bytes=34068, packets=334, duration=375, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_TYPE:ipv4], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:1, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000004, flowRuleCount=0
+
+
+SDN_DTU:flows -n                                               21:26:23
+deviceId=of:0000000000000001, flowRuleCount=2
+    id=af00003f9f0001, state=ADDED, bytes=98, packets=1, duration=3, liveType=UNKNOWN, priority=10, tableId=0, appId=org.onosproject.fwd, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:3], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=af000043a3c21c, state=ADDED, bytes=98, packets=1, duration=4, liveType=UNKNOWN, priority=10, tableId=0, appId=org.onosproject.fwd, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000002, flowRuleCount=2
+    id=af000005b81dbe, state=ADDED, bytes=98, packets=1, duration=4, liveType=UNKNOWN, priority=10, tableId=0, appId=org.onosproject.fwd, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=af00004ae44a6a, state=ADDED, bytes=0, packets=0, duration=3, liveType=UNKNOWN, priority=10, tableId=0, appId=org.onosproject.fwd, selector=[IN_PORT:3, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000003, flowRuleCount=1
+    id=af000055ce9345, state=ADDED, bytes=98, packets=1, duration=4, liveType=UNKNOWN, priority=10, tableId=0, appId=org.onosproject.fwd, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000004, flowRuleCount=1
+    id=af000027a9dd83, state=ADDED, bytes=0, packets=0, duration=4, liveType=UNKNOWN, priority=10, tableId=0, appId=org.onosproject.fwd, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+
+
+deviceId=of:0000000000000001, flowRuleCount=2
+    id=c000000eee1f1b, state=ADDED, bytes=0, packets=0, duration=7, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[VLAN_POP, OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c000003c9ae8fe, state=ADDED, bytes=0, packets=0, duration=75, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:1, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000002, flowRuleCount=2
+    id=c00000c8110415, state=ADDED, bytes=0, packets=0, duration=48, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[VLAN_POP, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c00000d8674dfc, state=ADDED, bytes=0, packets=0, duration=26, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02, ETH_TYPE:ipv4], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:1, OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000003, flowRuleCount=2
+    id=c0000073d9dc53, state=ADDED, bytes=0, packets=0, duration=17, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c000008155acf4, state=ADDED, bytes=0, packets=0, duration=61, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000004, flowRuleCount=0
+
+
+success rule : with vlan forwarding by Web UI input
+SDN_DTU:flows -n                                               21:36:17
+deviceId=of:0000000000000001, flowRuleCount=2
+    id=c000000eee1f1b, state=ADDED, bytes=0, packets=0, duration=7, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[VLAN_POP, OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c000003c9ae8fe, state=ADDED, bytes=0, packets=0, duration=75, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:1, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000002, flowRuleCount=2
+    id=c00000c8110415, state=ADDED, bytes=0, packets=0, duration=48, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[VLAN_POP, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c00000d8674dfc, state=ADDED, bytes=0, packets=0, duration=26, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02, ETH_TYPE:ipv4], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:1, OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000003, flowRuleCount=2
+    id=c0000073d9dc53, state=ADDED, bytes=0, packets=0, duration=17, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c000008155acf4, state=ADDED, bytes=0, packets=0, duration=61, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000004, flowRuleCount=0
+
+success with java REST API code
+SDN_DTU:flows -n                                               00:22:36
+deviceId=of:0000000000000001, flowRuleCount=2
+    id=c000000eee1f1b, state=ADDED, bytes=306, packets=3, duration=10, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[VLAN_POP, OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c000003c9ae8fe, state=ADDED, bytes=294, packets=3, duration=11, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:1, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000002, flowRuleCount=2
+    id=c00000c8110415, state=ADDED, bytes=306, packets=3, duration=11, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[VLAN_POP, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c00000d8674dfc, state=ADDED, bytes=294, packets=3, duration=11, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02, ETH_TYPE:ipv4], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:1, OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000003, flowRuleCount=2
+    id=c0000073d9dc53, state=ADDED, bytes=306, packets=3, duration=11, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c000008155acf4, state=ADDED, bytes=306, packets=3, duration=11, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000004, flowRuleCount=0
+
+
+SDN_DTU:flows -n                                               00:14:36
+deviceId=of:0000000000000001, flowRuleCount=3
+    id=c00000137af4ca, state=ADDED, bytes=0, packets=0, duration=520, liveType=UNKNOWN, priority=40000, tableId=0, appId=org.onosproject.rest, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:1, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c100000eee1f1b, state=ADDED, bytes=0, packets=0, duration=8, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[VLAN_POP, OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c100003c9ae8fe, state=ADDED, bytes=0, packets=0, duration=8, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:1, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000002, flowRuleCount=3
+    id=c00000c8110415, state=ADDED, bytes=0, packets=0, duration=520, liveType=UNKNOWN, priority=40000, tableId=0, appId=org.onosproject.rest, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[VLAN_POP, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c00000cd7890dc, state=ADDED, bytes=0, packets=0, duration=520, liveType=UNKNOWN, priority=40000, tableId=0, appId=org.onosproject.rest, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:1, OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c10000d8674dfc, state=ADDED, bytes=0, packets=0, duration=9, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02, ETH_TYPE:ipv4], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:1, OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000003, flowRuleCount=2
+    id=c0000073d9dc53, state=ADDED, bytes=0, packets=0, duration=521, liveType=UNKNOWN, priority=40000, tableId=0, appId=org.onosproject.rest, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c100008155acf4, state=ADDED, bytes=0, packets=0, duration=9, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000004, flowRuleCount=0
+
+
+SDN_DTU:flows -n                                               23:53:54
+deviceId=of:0000000000000001, flowRuleCount=2
+    id=c000000eee1f1b, state=ADDED, bytes=0, packets=0, duration=18, liveType=UNKNOWN, priority=40000, tableId=0, appId=org.onosproject.rest, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[VLAN_POP, OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c00000137af4ca, state=ADDED, bytes=0, packets=0, duration=18, liveType=UNKNOWN, priority=40000, tableId=0, appId=org.onosproject.rest, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:1, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000002, flowRuleCount=2
+    id=c00000c8110415, state=ADDED, bytes=0, packets=0, duration=18, liveType=UNKNOWN, priority=40000, tableId=0, appId=org.onosproject.rest, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[VLAN_POP, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c00000cd7890dc, state=ADDED, bytes=0, packets=0, duration=18, liveType=UNKNOWN, priority=40000, tableId=0, appId=org.onosproject.rest, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:1, OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000003, flowRuleCount=2
+    id=c0000073d9dc53, state=ADDED, bytes=0, packets=0, duration=19, liveType=UNKNOWN, priority=40000, tableId=0, appId=org.onosproject.rest, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c000008155acf4, state=ADDED, bytes=0, packets=0, duration=19, liveType=UNKNOWN, priority=40000, tableId=0, appId=org.onosproject.rest, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000004, flowRuleCount=0
+
+SDN_DTU:flows -n                                               00:05:12
+deviceId=of:0000000000000001, flowRuleCount=2
+    id=c000000eee1f1b, state=ADDED, bytes=0, packets=0, duration=10, liveType=UNKNOWN, priority=40000, tableId=0, appId=org.onosproject.rest, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[VLAN_POP, OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c00000137af4ca, state=ADDED, bytes=0, packets=0, duration=10, liveType=UNKNOWN, priority=40000, tableId=0, appId=org.onosproject.rest, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:1, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000002, flowRuleCount=2
+    id=c00000c8110415, state=ADDED, bytes=0, packets=0, duration=10, liveType=UNKNOWN, priority=40000, tableId=0, appId=org.onosproject.rest, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[VLAN_POP, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c00000cd7890dc, state=ADDED, bytes=0, packets=0, duration=10, liveType=UNKNOWN, priority=40000, tableId=0, appId=org.onosproject.rest, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:1, OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000003, flowRuleCount=2
+    id=c0000073d9dc53, state=ADDED, bytes=0, packets=0, duration=11, liveType=UNKNOWN, priority=40000, tableId=0, appId=org.onosproject.rest, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c000008155acf4, state=ADDED, bytes=0, packets=0, duration=11, liveType=UNKNOWN, priority=40000, tableId=0, appId=org.onosproject.rest, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000004, flowRuleCount=0
+
+
+SDN_DTU:flows -n                                               23:52:38
+deviceId=of:0000000000000001, flowRuleCount=2
+    id=af00003f9f0001, state=ADDED, bytes=196, packets=2, duration=1, liveType=UNKNOWN, priority=10, tableId=0, appId=org.onosproject.fwd, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=af0000925203ad, state=ADDED, bytes=196, packets=2, duration=2, liveType=UNKNOWN, priority=10, tableId=0, appId=org.onosproject.fwd, selector=[IN_PORT:3, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000002, flowRuleCount=2
+    id=af000005b81dbe, state=ADDED, bytes=196, packets=2, duration=2, liveType=UNKNOWN, priority=10, tableId=0, appId=org.onosproject.fwd, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:3], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=af0000431ab241, state=ADDED, bytes=98, packets=1, duration=1, liveType=UNKNOWN, priority=10, tableId=0, appId=org.onosproject.fwd, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000003, flowRuleCount=1
+    id=af0000fa06b897, state=ADDED, bytes=196, packets=2, duration=2, liveType=UNKNOWN, priority=10, tableId=0, appId=org.onosproject.fwd, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000004, flowRuleCount=1
+    id=af0000cfa74857, state=ADDED, bytes=294, packets=3, duration=3, liveType=UNKNOWN, priority=10, tableId=0, appId=org.onosproject.fwd, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+SDN_DTU:   
+
