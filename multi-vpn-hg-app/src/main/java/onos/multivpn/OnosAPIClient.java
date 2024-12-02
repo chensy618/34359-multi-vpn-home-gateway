@@ -139,9 +139,6 @@ public class OnosAPIClient {
         return flow;
     }
 
-
-
-
     public void addFlowRule(String deviceId, String inPort, String mac, String vlanId, String outPort, String actions) {
         try {
             // Construct flow JSON
@@ -209,6 +206,33 @@ public class OnosAPIClient {
             e.printStackTrace();
         }
     }
+    public void clearAllFlows(String appId) {
+        try {
+            // 构建删除流表的 URL
+            String urlString = API_URL + "flows/application/" + appId;
+            URL url = new URL(urlString);
+
+            // 创建 HTTP DELETE 请求
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("DELETE");
+            conn.setRequestProperty("Authorization", AUTH_HEADER);
+
+            // 获取响应码
+            int responseCode = conn.getResponseCode();
+            if (responseCode == 200) {
+                System.out.println("Successfully cleared all flows for appId: " + appId);
+            } else {
+                System.out.println("Failed to clear flows for appId: " + appId + ". Response code: " + responseCode);
+            }
+
+            // 关闭连接
+            conn.disconnect();
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Error clearing flows for appId: " + appId + ". Exception: " + e.getMessage());
+        }
+    }
+
 //    public String extractDeviceId(String devicesJson) {
 //        System.out.println("Extracting device ID from JSON: " + devicesJson);
 //        JSONObject json = new JSONObject(devicesJson);
