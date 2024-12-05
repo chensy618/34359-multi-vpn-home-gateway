@@ -252,3 +252,31 @@ s1 : s3 -> s1
         ]
     }
 }
+
+Intent Service :
+  
+{
+    "type": "HostToHostIntent",
+    "appId": "org.onosproject.ovsdb",
+    "priority": 55,
+    "one": "00:00:00:00:00:01/None",
+    "two": "00:00:00:00:00:02/None"
+}
+
+{
+    "type": "HostToHostIntent",
+    "appId": "org.onosproject.ovsdb",
+    "priority": 55,
+    "one": "00:00:00:00:00:01/None",
+    "two": "00:00:00:00:00:03/None"
+}
+  
+{
+    "type": "HostToHostIntent",
+    "appId": "org.onosproject.ovsdb",
+    "priority": 55,
+    "one": "00:00:00:00:00:01/None",
+    "two": "00:00:00:00:00:04/None"
+}
+  
+    
