@@ -1,0 +1,306 @@
+Debug Info: {
+    "hosts": [
+        {
+            "id": "D2:ED:97:E6:3E:EE/None",
+            "mac": "D2:ED:97:E6:3E:EE",
+            "vlan": "None",
+            "innerVlan": "None",
+            "outerTpid": "unknown",
+            "configured": false,
+            "ipAddresses": [
+                "10.0.0.4"
+            ],
+            "locations": [
+                {
+                    "elementId": "of:0000000000000003",
+                    "port": "1"
+                }
+            ]
+        },
+        {
+            "id": "FA:8A:4E:0A:6E:E4/None",
+            "mac": "FA:8A:4E:0A:6E:E4",
+            "vlan": "None",
+            "innerVlan": "None",
+            "outerTpid": "unknown",
+            "configured": false,
+            "ipAddresses": [
+                "10.0.0.7"
+            ],
+            "locations": [
+                {
+                    "elementId": "of:0000000000000004",
+                    "port": "2"
+                }
+            ]
+        },
+        {
+            "id": "12:26:5C:20:44:E0/None",
+            "mac": "12:26:5C:20:44:E0",
+            "vlan": "None",
+            "innerVlan": "None",
+            "outerTpid": "unknown",
+            "configured": false,
+            "ipAddresses": [
+                "10.0.0.2"
+            ],
+            "locations": [
+                {
+                    "elementId": "of:0000000000000002",
+                    "port": "1"
+                }
+            ]
+        },
+        {
+            "id": "62:E5:4F:AB:EA:6B/None",
+            "mac": "62:E5:4F:AB:EA:6B",
+            "vlan": "None",
+            "innerVlan": "None",
+            "outerTpid": "unknown",
+            "configured": false,
+            "ipAddresses": [
+                "10.0.0.3"
+            ],
+            "locations": [
+                {
+                    "elementId": "of:0000000000000002",
+                    "port": "2"
+                }
+            ]
+        },
+        {
+            "id": "8A:24:2D:08:9B:7B/None",
+            "mac": "8A:24:2D:08:9B:7B",
+            "vlan": "None",
+            "innerVlan": "None",
+            "outerTpid": "unknown",
+            "configured": false,
+            "ipAddresses": [
+                "10.0.0.1"
+            ],
+            "locations": [
+                {
+                    "elementId": "of:0000000000000001",
+                    "port": "1"
+                }
+            ]
+        },
+        {
+            "id": "06:A1:1B:90:29:50/None",
+            "mac": "06:A1:1B:90:29:50",
+            "vlan": "None",
+            "innerVlan": "None",
+            "outerTpid": "unknown",
+            "configured": false,
+            "ipAddresses": [
+                "10.0.0.6"
+            ],
+            "locations": [
+                {
+                    "elementId": "of:0000000000000004",
+                    "port": "1"
+                }
+            ]
+        },
+        {
+            "id": "86:DB:0A:A7:25:27/None",
+            "mac": "86:DB:0A:A7:25:27",
+            "vlan": "None",
+            "innerVlan": "None",
+            "outerTpid": "unknown",
+            "configured": false,
+            "ipAddresses": [
+                "10.0.0.5"
+            ],
+            "locations": [
+                {
+                    "elementId": "of:0000000000000003",
+                    "port": "2"
+                }
+            ]
+        }
+    ]
+}
+
+
+Debug Info: {
+    "devices": [
+        {
+            "id": "of:0000000000000003",
+            "type": "SWITCH",
+            "available": true,
+            "role": "MASTER",
+            "mfr": "Nicira, Inc.",
+            "hw": "Open vSwitch",
+            "sw": "2.13.3",
+            "serial": "None",
+            "driver": "ovs",
+            "chassisId": "3",
+            "lastUpdate": "1732817979908",
+            "humanReadableLastUpdate": "connected 6m19s ago",
+            "annotations": {
+                "channelId": "127.0.0.1:34656",
+                "managementAddress": "127.0.0.1",
+                "protocol": "OF_13"
+            }
+        },
+        {
+            "id": "of:0000000000000004",
+            "type": "SWITCH",
+            "available": true,
+            "role": "MASTER",
+            "mfr": "Nicira, Inc.",
+            "hw": "Open vSwitch",
+            "sw": "2.13.3",
+            "serial": "None",
+            "driver": "ovs",
+            "chassisId": "4",
+            "lastUpdate": "1732817980330",
+            "humanReadableLastUpdate": "connected 6m18s ago",
+            "annotations": {
+                "channelId": "127.0.0.1:34658",
+                "managementAddress": "127.0.0.1",
+                "protocol": "OF_13"
+            }
+        },
+        {
+            "id": "of:0000000000000001",
+            "type": "SWITCH",
+            "available": true,
+            "role": "MASTER",
+            "mfr": "Nicira, Inc.",
+            "hw": "Open vSwitch",
+            "sw": "2.13.3",
+            "serial": "None",
+            "driver": "ovs",
+            "chassisId": "1",
+            "lastUpdate": "1732817979814",
+            "humanReadableLastUpdate": "connected 6m19s ago",
+            "annotations": {
+                "channelId": "127.0.0.1:34652",
+                "managementAddress": "127.0.0.1",
+                "protocol": "OF_13"
+            }
+        },
+        {
+            "id": "of:0000000000000002",
+            "type": "SWITCH",
+            "available": true,
+            "role": "MASTER",
+            "mfr": "Nicira, Inc.",
+            "hw": "Open vSwitch",
+            "sw": "2.13.3",
+            "serial": "None",
+            "driver": "ovs",
+            "chassisId": "2",
+            "lastUpdate": "1732817979872",
+            "humanReadableLastUpdate": "connected 6m19s ago",
+            "annotations": {
+                "channelId": "127.0.0.1:34654",
+                "managementAddress": "127.0.0.1",
+                "protocol": "OF_13"
+            }
+        }
+    ]
+}
+
+Debug Info: {
+    "links": [
+        {
+            "src": {
+                "port": "3",
+                "device": "of:0000000000000001"
+            },
+            "dst": {
+                "port": "3",
+                "device": "of:0000000000000004"
+            },
+            "type": "DIRECT",
+            "state": "ACTIVE"
+        },
+        {
+            "src": {
+                "port": "4",
+                "device": "of:0000000000000002"
+            },
+            "dst": {
+                "port": "4",
+                "device": "of:0000000000000004"
+            },
+            "type": "DIRECT",
+            "state": "ACTIVE"
+        },
+        {
+            "src": {
+                "port": "3",
+                "device": "of:0000000000000004"
+            },
+            "dst": {
+                "port": "3",
+                "device": "of:0000000000000001"
+            },
+            "type": "DIRECT",
+            "state": "ACTIVE"
+        },
+        {
+            "src": {
+                "port": "3",
+                "device": "of:0000000000000003"
+            },
+            "dst": {
+                "port": "2",
+                "device": "of:0000000000000001"
+            },
+            "type": "DIRECT",
+            "state": "ACTIVE"
+        },
+        {
+            "src": {
+                "port": "4",
+                "device": "of:0000000000000004"
+            },
+            "dst": {
+                "port": "4",
+                "device": "of:0000000000000002"
+            },
+            "type": "DIRECT",
+            "state": "ACTIVE"
+        },
+        {
+            "src": {
+                "port": "2",
+                "device": "of:0000000000000001"
+            },
+            "dst": {
+                "port": "3",
+                "device": "of:0000000000000003"
+            },
+            "type": "DIRECT",
+            "state": "ACTIVE"
+        },
+        {
+            "src": {
+                "port": "3",
+                "device": "of:0000000000000002"
+            },
+            "dst": {
+                "port": "4",
+                "device": "of:0000000000000003"
+            },
+            "type": "DIRECT",
+            "state": "ACTIVE"
+        },
+        {
+            "src": {
+                "port": "4",
+                "device": "of:0000000000000003"
+            },
+            "dst": {
+                "port": "3",
+                "device": "of:0000000000000002"
+            },
+            "type": "DIRECT",
+            "state": "ACTIVE"
+        }
+    ]
+}

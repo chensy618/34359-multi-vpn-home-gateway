@@ -28,6 +28,10 @@ public class SelectVPNNodeServlet extends HttpServlet {
         String[] selectedNodes;
         String vlan = "10"; // default VLAN ID
 
+        String statusProvider1 = request.getParameter("statusProvider1");
+        String statusProvider2 = request.getParameter("statusProvider2");
+        String statusProvider3 = request.getParameter("statusProvider3");
+
         // Determine automatic routing or manually selected nodes
         if (autoRoute) {
             String selectedNode = request.getParameter("serviceProvider");
@@ -45,7 +49,7 @@ public class SelectVPNNodeServlet extends HttpServlet {
                                 destinationHost = "00:00:00:00:00:03/None";
                                 break;
                             case "provider3":
-                                destinationHost = "00:00:00:00:00:03/None";
+                                destinationHost = "00:00:00:00:00:04/None";
                                 break;
                             default:
                                 destinationHost = null;
@@ -130,15 +134,30 @@ public class SelectVPNNodeServlet extends HttpServlet {
                 switch (selectedNode) {
                     case "provider1":
                         vlan = "10";
-                        configureFlowRules(onosClient, "h1", "h2", "s1", "s2", vlan);
+                        if ("enable".equals(statusProvider1)) {
+                            cleanOldFlowRules(onosClient);
+                            configureFlowRules(onosClient, "h1", "h2", "s1", "s2", vlan);
+                        }else {
+                            cleanOldFlowRules(onosClient);
+                        }
                         break;
                     case "provider2":
                         vlan = "20";
-                        configureFlowRules(onosClient, "h1", "h3", "s1", "s3", vlan);
+                        if ("enable".equals(statusProvider2)) {
+                            cleanOldFlowRules(onosClient);
+                            configureFlowRules(onosClient, "h1", "h3", "s1", "s3", vlan);
+                        }else{
+                            cleanOldFlowRules(onosClient);
+                        }
                         break;
                     case "provider3":
                         vlan = "30";
-                        configureFlowRules(onosClient, "h1", "h4", "s1", "s4", vlan);
+                        if ("enable".equals(statusProvider3)) {
+                            cleanOldFlowRules(onosClient);
+                            configureFlowRules(onosClient, "h1", "h4", "s1", "s4", vlan);
+                        }else{
+                            cleanOldFlowRules(onosClient);
+                        }
                         break;
                     default:
                         System.out.println("Invalid serviceProvider selected: " + selectedNode);
@@ -212,65 +231,30 @@ public class SelectVPNNodeServlet extends HttpServlet {
         // config h1 -> h2/h3/h4 flow rules : forward direction
         onosClient.submitFlowRule(
                 onosClient.createFlowRule(srcInPort, srcOutPort, srcMac, dstMac, "push", vlan),
-                srcDeviceId, "001"
+                srcDeviceId, "multiVPN"
         );
         onosClient.submitFlowRule(
                 onosClient.createFlowRule(dstInPort, dstOutPort, srcMac, dstMac, "pop", vlan),
-                dstDeviceId, "001"
+                dstDeviceId, "multiVPN"
         );
 
         // config h2/h3/h4 -> h1 flow rules : backward direction
         onosClient.submitFlowRule(
                 onosClient.createFlowRule(dstOutPort, dstInPort, dstMac, srcMac, "push", vlan),
-                dstDeviceId, "001"
+                dstDeviceId, "multiVPN"
         );
         onosClient.submitFlowRule(
                 onosClient.createFlowRule(srcOutPort, srcInPort, dstMac, srcMac, "pop", vlan),
-                srcDeviceId, "001"
+                srcDeviceId, "multiVPN"
         );
 
         System.out.println("Flow rules configured successfully for VLAN " + vlan);
     }
 
-//    // 配置流规则的方法: test one route to make sure the flow rules work
-//    private void configureFlowRules(OnosAPIClient onosClient, String srcHost, String dstHost,
-//                                    String srcSwitch, String dstSwitch, String vlan) {
-//        // 获取 MAC 地址和设备 ID
-//        String srcMac = getMacAddress(srcHost);
-//        String dstMac = getMacAddress(dstHost);
-//        String srcDeviceId = getDeviceID(srcSwitch);
-//        String dstDeviceId = getDeviceID(dstSwitch);
-//
-//        // 设置交换机的输入和输出端口
-//        String srcInPort = "1"; // srcHost -> srcSwitch 端口
-//        String srcOutPort = "2"; // srcSwitch -> dstSwitch 端口
-//        String dstInPort = "1"; // dstSwitch -> srcSwitch 端口
-//        String dstOutPort = "2"; // dstSwitch -> dstHost 端口
-//
-//        // 配置 h1 -> h2 的流规则 (正向流)
-//        onosClient.submitFlowRule(
-//                onosClient.createFlowRule(srcInPort, srcOutPort, srcMac, dstMac, "push", vlan),
-//                srcDeviceId, "001"
-//        );
-//        onosClient.submitFlowRule(
-//                onosClient.createFlowRule(dstInPort, dstOutPort, srcMac, dstMac, "pop", vlan),
-//                dstDeviceId, "001"
-//        );
-//
-//        // 配置 h2 -> h1 的流规则 (反向流)
-//        onosClient.submitFlowRule(
-//                onosClient.createFlowRule(dstOutPort, dstInPort, dstMac, srcMac, "push", vlan),
-//                dstDeviceId, "001"
-//        );
-//        onosClient.submitFlowRule(
-//                onosClient.createFlowRule(srcOutPort, srcInPort, dstMac, srcMac, "pop", vlan),
-//                srcDeviceId, "001"
-//        );
-//    }
 
     // clear old flow rules, this is also important, because every time we need to make sure src could only communicate with dst.
     private void cleanOldFlowRules(OnosAPIClient onosClient) {
-        onosClient.clearAllFlows("001");
+        onosClient.clearAllFlows("multiVPN");
         System.out.println("Old flow rules cleared.");
     }
 
@@ -298,6 +282,9 @@ public class SelectVPNNodeServlet extends HttpServlet {
         response.sendRedirect("index.jsp");
     }
 }
+
+
+
 
 
 

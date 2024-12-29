@@ -89,6 +89,28 @@ deviceId=of:0000000000000003, flowRuleCount=2
 deviceId=of:0000000000000004, flowRuleCount=0
 
 
+SDN_DTU:flows -n                                          16:22:43
+deviceId=of:0000000000000001, flowRuleCount=2
+    id=c000003c9ae8fe, state=ADDED, bytes=490, packets=5, duration=10, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:10, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c00000d6a20bcc, state=ADDED, bytes=0, packets=0, duration=10, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4, VLAN_VID:10], treatment=DefaultTrafficTreatment{immediate=[VLAN_POP, OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000002, flowRuleCount=2
+    id=c0000040f95dcd, state=ADDED, bytes=0, packets=0, duration=10, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02, ETH_TYPE:ipv4, VLAN_VID:10], treatment=DefaultTrafficTreatment{immediate=[VLAN_POP, OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c00000bd99b8c2, state=ADDED, bytes=0, packets=0, duration=10, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02, ETH_TYPE:ipv4], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:10, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000003, flowRuleCount=0
+deviceId=of:0000000000000004, flowRuleCount=0
+SDN_DTU:                                      
+
+SDN_DTU:flows -n                                          16:29:04
+deviceId=of:0000000000000001, flowRuleCount=2
+    id=c000003c9ae8fe, state=ADDED, bytes=490, packets=5, duration=5, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:10, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c00000d6a20bcc, state=ADDED, bytes=0, packets=0, duration=5, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4, VLAN_VID:10], treatment=DefaultTrafficTreatment{immediate=[VLAN_POP, OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000002, flowRuleCount=2
+    id=c0000001ad8d67, state=ADDED, bytes=0, packets=0, duration=5, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02, ETH_TYPE:ipv4, VLAN_VID:10], treatment=DefaultTrafficTreatment{immediate=[VLAN_POP, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c00000d8674dfc, state=ADDED, bytes=0, packets=0, duration=5, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02, ETH_TYPE:ipv4], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:10, OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000003, flowRuleCount=0
+deviceId=of:0000000000000004, flowRuleCount=0
+
+
 SDN_DTU:flows -n                                               00:14:36
 deviceId=of:0000000000000001, flowRuleCount=3
     id=c00000137af4ca, state=ADDED, bytes=0, packets=0, duration=520, liveType=UNKNOWN, priority=40000, tableId=0, appId=org.onosproject.rest, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:1, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
@@ -142,3 +164,26 @@ deviceId=of:0000000000000004, flowRuleCount=1
     id=af0000cfa74857, state=ADDED, bytes=294, packets=3, duration=3, liveType=UNKNOWN, priority=10, tableId=0, appId=org.onosproject.fwd, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02], treatment=DefaultTrafficTreatment{immediate=[OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
 SDN_DTU:   
 
+
+correct flow rules:
+SDN_DTU:flows -n                                          16:52:13
+deviceId=of:0000000000000001, flowRuleCount=2
+    id=c000000eee1f1b, state=ADDED, bytes=0, packets=0, duration=26, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[VLAN_POP, OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c000003c9ae8fe, state=ADDED, bytes=0, packets=0, duration=38, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:1, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000002, flowRuleCount=2
+    id=c00000c8110415, state=ADDED, bytes=0, packets=0, duration=10, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4, VLAN_VID:1], treatment=DefaultTrafficTreatment{immediate=[VLAN_POP, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c00000d8674dfc, state=ADDED, bytes=0, packets=0, duration=2, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02, ETH_TYPE:ipv4], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:1, OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000003, flowRuleCount=0
+deviceId=of:0000000000000004, flowRuleCount=0
+
+
+correct flow rules:
+SDN_DTU:flows -n                                          16:56:20
+deviceId=of:0000000000000001, flowRuleCount=2
+    id=c000003c9ae8fe, state=ADDED, bytes=0, packets=0, duration=4, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:10, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c00000489a29f2, state=ADDED, bytes=0, packets=0, duration=4, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02, ETH_TYPE:ipv4, VLAN_VID:10], treatment=DefaultTrafficTreatment{immediate=[VLAN_POP, OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000002, flowRuleCount=2
+    id=c00000d8674dfc, state=ADDED, bytes=0, packets=0, duration=4, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:2, ETH_DST:00:00:00:00:00:01, ETH_SRC:00:00:00:00:00:02, ETH_TYPE:ipv4], treatment=DefaultTrafficTreatment{immediate=[VLAN_PUSH:vlan, VLAN_ID:10, OUTPUT:1], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+    id=c00000e0c04c4b, state=ADDED, bytes=0, packets=0, duration=4, liveType=UNKNOWN, priority=40000, tableId=0, appId=001, selector=[IN_PORT:1, ETH_DST:00:00:00:00:00:02, ETH_SRC:00:00:00:00:00:01, ETH_TYPE:ipv4, VLAN_VID:10], treatment=DefaultTrafficTreatment{immediate=[VLAN_POP, OUTPUT:2], deferred=[], transition=None, meter=[], cleared=false, StatTrigger=null, metadata=null}
+deviceId=of:0000000000000003, flowRuleCount=0
+deviceId=of:0000000000000004, flowRuleCount=0
