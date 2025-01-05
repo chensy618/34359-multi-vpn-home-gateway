@@ -250,11 +250,11 @@
                 String destination = "h2";
                 if (selectedNodes != null && selectedNodes.length > 0) {
                     if ("provider1".equals(selectedNodes[0])) {
-                        destination = "h2";
+                        destination = "sp1";
                     } else if ("provider2".equals(selectedNodes[0])) {
-                        destination = "h3";
+                        destination = "sp2";
                     } else if ("provider3".equals(selectedNodes[0])) {
-                        destination = "h4";
+                        destination = "sp3";
                     } else {
                         destination = "Unknown";
                     }

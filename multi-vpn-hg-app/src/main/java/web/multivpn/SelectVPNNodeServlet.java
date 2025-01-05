@@ -43,13 +43,13 @@ public class SelectVPNNodeServlet extends HttpServlet {
                         String destinationHost;
                         switch (selectedNode){
                             case "provider1":
-                                destinationHost = "00:00:00:00:00:02/None"; // h2
+                                destinationHost = "00:00:00:00:00:02/None"; // sp1
                                 break;
                             case "provider2":
-                                destinationHost = "00:00:00:00:00:03/None";
+                                destinationHost = "00:00:00:00:00:03/None"; // sp2
                                 break;
                             case "provider3":
-                                destinationHost = "00:00:00:00:00:04/None";
+                                destinationHost = "00:00:00:00:00:04/None"; // sp3
                                 break;
                             default:
                                 destinationHost = null;
@@ -136,7 +136,7 @@ public class SelectVPNNodeServlet extends HttpServlet {
                         vlan = "10";
                         if ("enable".equals(statusProvider1)) {
                             cleanOldFlowRules(onosClient);
-                            configureFlowRules(onosClient, "h1", "h2", "s1", "s2", vlan);
+                            configureFlowRules(onosClient, "h1", "sp1", "s1", "s2", vlan);
                         }else {
                             cleanOldFlowRules(onosClient);
                         }
@@ -145,7 +145,7 @@ public class SelectVPNNodeServlet extends HttpServlet {
                         vlan = "20";
                         if ("enable".equals(statusProvider2)) {
                             cleanOldFlowRules(onosClient);
-                            configureFlowRules(onosClient, "h1", "h3", "s1", "s3", vlan);
+                            configureFlowRules(onosClient, "h1", "sp2", "s1", "s3", vlan);
                         }else{
                             cleanOldFlowRules(onosClient);
                         }
@@ -154,7 +154,7 @@ public class SelectVPNNodeServlet extends HttpServlet {
                         vlan = "30";
                         if ("enable".equals(statusProvider3)) {
                             cleanOldFlowRules(onosClient);
-                            configureFlowRules(onosClient, "h1", "h4", "s1", "s4", vlan);
+                            configureFlowRules(onosClient, "h1", "sp3", "s1", "s4", vlan);
                         }else{
                             cleanOldFlowRules(onosClient);
                         }
@@ -262,9 +262,9 @@ public class SelectVPNNodeServlet extends HttpServlet {
     private String getMacAddress(String host) {
         Map<String, String> macAddresses = new HashMap<>();
         macAddresses.put("h1", "00:00:00:00:00:01");
-        macAddresses.put("h2", "00:00:00:00:00:02");
-        macAddresses.put("h3", "00:00:00:00:00:03");
-        macAddresses.put("h4", "00:00:00:00:00:04");
+        macAddresses.put("sp1", "00:00:00:00:00:02");
+        macAddresses.put("sp2", "00:00:00:00:00:03");
+        macAddresses.put("sp3", "00:00:00:00:00:04");
         return macAddresses.getOrDefault(host, "");
     }
 
