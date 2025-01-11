@@ -201,15 +201,15 @@ public class SelectVPNNodeServlet extends HttpServlet {
 
         // config the outport accordind to the vlan ID
         switch (vlan) {
-            case "10": // VLAN 10: h1 -> h2
+            case "10": // VLAN 10: h1 -> sp1
                 srcOutPort = "2"; // srcSwitch -> dstSwitch port
                 dstOutPort = "2"; // dstSwitch -> dstHost port
                 break;
-            case "20": // VLAN 20: h1 -> h3
+            case "20": // VLAN 20: h1 -> sp2
                 srcOutPort = "3"; // srcSwitch -> dstSwitch port
                 dstOutPort = "2"; // dstSwitch -> dstHost port
                 break;
-            case "30": // VLAN 30: h1 -> h4
+            case "30": // VLAN 30: h1 -> sp3
                 srcOutPort = "4"; // srcSwitch -> dstSwitch port
                 dstOutPort = "2"; // dstSwitch -> dstHost port
                 break;
@@ -228,7 +228,7 @@ public class SelectVPNNodeServlet extends HttpServlet {
         out.println("Source Switch Ports: IN=" + srcInPort + ", OUT=" + srcOutPort);
         out.println("Destination Switch Ports: IN=" + dstInPort + ", OUT=" + dstOutPort);
 
-        // config h1 -> h2/h3/h4 flow rules : forward direction
+        // config h1 -> sp1/sp2/sp3 flow rules : forward direction
         onosClient.submitFlowRule(
                 onosClient.createFlowRule(srcInPort, srcOutPort, srcMac, dstMac, "push", vlan),
                 srcDeviceId, "multiVPN"
@@ -238,7 +238,7 @@ public class SelectVPNNodeServlet extends HttpServlet {
                 dstDeviceId, "multiVPN"
         );
 
-        // config h2/h3/h4 -> h1 flow rules : backward direction
+        // config sp1/sp2/sp3 -> h1 flow rules : backward direction
         onosClient.submitFlowRule(
                 onosClient.createFlowRule(dstOutPort, dstInPort, dstMac, srcMac, "push", vlan),
                 dstDeviceId, "multiVPN"

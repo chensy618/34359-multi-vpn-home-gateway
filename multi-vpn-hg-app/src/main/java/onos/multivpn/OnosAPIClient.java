@@ -74,6 +74,12 @@ public class OnosAPIClient {
         return response;
     }
 
+    // Get all flow entries
+    public String getFlows() throws IOException {
+        String response = connectToOnos("flows");
+        return response;
+    }
+
     public int submitFlowRule(JSONObject flowJson, String deviceId, String appId) {
         try {
             URL url = new URL(API_URL + "flows/" + deviceId + "?appId=" + appId);
@@ -87,6 +93,8 @@ public class OnosAPIClient {
                 os.write(flowJson.toString().getBytes());
                 os.flush();
             }
+
+            out.println(flowJson);
 
             int responseCode = conn.getResponseCode();
             if (responseCode == 200 || responseCode == 201) {
@@ -135,7 +143,6 @@ public class OnosAPIClient {
         }
         selector.put("criteria", criteria);
         flow.put("selector", selector);
-
         return flow;
     }
 
